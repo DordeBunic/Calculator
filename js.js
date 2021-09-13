@@ -55,6 +55,7 @@ function setOperator(operatorValue) {
 }
 function getResult() {
   secondNumber = parseFloat(document.getElementById("screen").innerText);
+ if(!isNaN(secondNumber)){
   if (operator == "+")
     document.getElementById("screen").innerText =
       parseFloat(firstNumber) + secondNumber;
@@ -66,5 +67,6 @@ function getResult() {
     if (parseFloat(document.getElementById("screen").innerText) != 0 && parseFloat(firstNumber) != 0)
         document.getElementById("screen").innerText= parseFloat(firstNumber) /secondNumber;
      else   document.getElementById("screen").innerText= "Division by zero.";
+  }
   }
 }
